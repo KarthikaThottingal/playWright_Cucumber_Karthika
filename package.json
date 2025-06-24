@@ -1,0 +1,26 @@
+{
+  "name": "playwright_cucumber_karthika",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test",
+    "test:json": "npx cucumber-js --format json:Reports/cucumber.json",
+    "test:debug": "set PWDEBUG=1  && cucumber-js",
+    "generate:html": "node update-final-report.js",
+    "test:full": "cmd /C \"npm run test:json || echo continuing...\" && npm run generate:html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18",
+    "cucumber-html-reporter": "^6.0.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "dotenv": "^16.5.0",
+    "exceljs": "^4.4.0"
+  }
+}
